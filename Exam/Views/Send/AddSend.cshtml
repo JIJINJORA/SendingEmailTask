@@ -1,0 +1,32 @@
+﻿@model Exam.Models.Send
+<form asp-action="AddSend" method="post" class="form-control" >
+
+	<div>
+		<label>From</label>
+		<input type="text" asp-for="From" class="form-control" />
+		<span class="text-danger" asp-validation-for="From"></span>
+	</div>
+	<div>
+		<label>To</label>
+		<input type="text" asp-for="To" class="form-control"  />
+		<span class="text-danger" asp-validation-for="To"></span>
+	</div>
+	<div>
+		<label>Subject</label>
+		<input type="text" asp-for="Subject" class="form-control" />
+		<span class="text-danger" asp-validation-for="Subject"></span>
+	</div>
+	<div>
+		<label>Message</label>
+		<input type="text" asp-for="Message" class="form-control" />
+		<span class="text-danger" asp-validation-for="Message"></span>
+	</div>
+	<div>
+		<button type="submit" class="btn btn-primary " >Submit</button>
+	</div>
+</form>
+
+
+@section Scripts {
+	<partial name="_ValidationScriptsPartial.cshtml" />
+}
